@@ -191,16 +191,16 @@ function startMixingFunction() {
     cornerSize: 24
   })
 
-  function renderIcon(ctx, left, top, styleOverride, fabricObject){
+  function renderIcon(ctx, left, top, styleOverride, fabricObject) {
     let size = this.cornerSize
-  ctx.save()
-  ctx.translate(left, top)
-  ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle))
-  ctx.drawImage(img, -size/2, -size/2, size, size)
-  ctx.restore()
+    ctx.save()
+    ctx.translate(left, top)
+    ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle))
+    ctx.drawImage(img, -size / 2, -size / 2, size, size)
+    ctx.restore()
   }
 
-  function deleteObject(eventData, target){
+  function deleteObject(eventData, target) {
     let canvas = target.canvas
     canvas.remove(target)
     canvas.requestRenderAll()
@@ -229,31 +229,31 @@ function startMixingFunction() {
 
 
 
-function deleteObjectKeyboard(){
+function deleteObjectKeyboard() {
   canvas.remove(canvas.getActiveObject())
   canvas.requestRenderAll()
-}//end deleteObjectKeyboard
+} //end deleteObjectKeyboard
 
-function pushBack(){
+function pushBack() {
   canvas.sendBackwards(canvas.getActiveObject())
   canvas.discardActiveObject()
   canvas.requestRenderAll()
   console.log('back')
-}// end pushBack
+} // end pushBack
 
-function pushForward(){
+function pushForward() {
   canvas.bringForward(canvas.getActiveObject())
   canvas.discardActiveObject()
   canvas.requestRenderAll()
   console.log('forward')
-}// end push Forward
+} // end push Forward
 
 function saveImage(e) {
   var d = new Date();
   var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   let td = `${months[d.getMonth()]}-${d.getDate()}-${d.getFullYear()}-${d.getHours()}-${d.getMinutes()}-${d.getSeconds()}`
 
-  e.target.download = `myImage-${td}.png`//'myImage.png'
+  e.target.download = `myImage-${td}.png` //'myImage.png'
   e.target.href = canvas.toDataURL('image/png')
 
 } //end saveImage
