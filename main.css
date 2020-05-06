@@ -17,44 +17,77 @@
 .displayBlock{display: block;}
 
 body {
-  background-color: #008080;
+  background-image: url("images/bg1.jpg");
+  object-fit: cover;
+  /* background-color: #008080;
   color: #ddd;
-  rgb(247, 217, 255)
+  rgb(247, 217, 255) */
 }
+
+  .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8B668B;
+    padding-top: 40px;
+  }
 
 h1 {
   text-align: center;
+  letter-spacing: 3px;
   font-size: 50px;
-  padding: 20px;
-  color: #E0FFFF;
+  font-family: Impact, Charcoal, sans-serif;
+  padding-bottom: 40px;
+  background-color: #8B668B;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  color: #F0F8FF;
 }
+
+h3{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
 
 p{
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: pink;
 }
 
+
+
 #video {
-  border: 1px solid black;
+  border: 5px solid #8B7B8B;
   box-shadow: 2px 2px 3px black;
-  width: 320px;
-  height: 240px;
+  width: 400px;
+  height: auto;
   /* help with camera reversal */
   transform: rotateY(180deg);
 }
 
 #photo {
-  border: 1px solid black;
+  border: 5px solid #8B7B8B;
   box-shadow: 2px 2px 3px black;
-  width: 320px;
-  height: 240px;
+  width: 400px;
+  height: 302px;
 }
 
 #canvasPhoto {
   display: none;
 }
 
+.items{
+  display: flex;
+  justify-content: center;
+}
+
 .camera {
-  width: 340px;
+  width: 400px;
   display: inline-block;
 
 }
@@ -76,6 +109,7 @@ button, #downloadButton{
   padding: 0.5em;
   border-radius: 0.5em;
 }
+
 #startButton {
   display: block;
   position: relative;
@@ -83,15 +117,59 @@ button, #downloadButton{
   margin-right: auto;
   bottom: 102px;
 }
+  #backButton {
+    padding: 5px;
+    margin-left: 10em;
+    border-color: white;
+    text-decoration: none;
+  }
+
+  #forwardButton {
+    padding: 5px;
+    margin-left: 1em;
+    border-color: white;
+    text-decoration: none;
+  }
+
+
+/* ///////////hover///////////// */
+
+button:hover {
+  background-color: #8B7B8B;
+  color: white;
+}
+
+#startMixingButton:hover {
+  background-color: #8B668B;
+  color: white;
+}
+
+#downloadButton:hover {
+  background-color: #8B668B;
+  color: white;
+}
+
+#returnButton:hover {
+  background-color: #8B668B;
+  color: white;
+}
+
+/* ///////////end hover///////////// */
 
 section{
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   font-family: "Lucida Grande", "Arial", sans-serif;
-  width: 800px;
+  width: 1000px;
 
 }
 #cameraContentarea {
-  background-color: #008B8B;
+  width:1000px;
+  height: auto;
+  border: 2px;
+  border-radius: 20px;
+  background-color: #008B;
 }
 
 #startMixingButton, #downloadButton, #returnButton {
@@ -103,9 +181,37 @@ section{
   border-color: white;
 }
 /* ------------------- */
+
 #canvasMixArea {
-  background-color: #333;
+  background-color: #8B7B8B	;
 }
+  .canvas{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .img{
+    padding-top: 2em;
+    padding-left: 6em;
+    padding-bottom: 2em;
+  }
+
 #c{
+  padding: 3px;
   background-image: url('images/checker.png');
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto  ;
+  grid-gap: 10px;
+  padding: 50px;
+}
+
+.grid-container > div {
+
+  text-align: center;
+  padding: 15px 0;
+  font-size: 15px;
+  color: pink;
 }

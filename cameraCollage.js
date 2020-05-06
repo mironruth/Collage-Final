@@ -9,6 +9,7 @@ let startButton = null
 let startMixingButton = null
 let lips = null
 let glasses = null
+let deco = null
 let flower = null
 let hair = null
 let gold = null
@@ -19,6 +20,9 @@ let bday = null
 let cone = null
 let color = null
 let pink = null
+let glow = null
+let green = null
+let heart = null
 
 let db = null
 let returnButton = null
@@ -44,7 +48,7 @@ function startUp() {
   startButton = document.querySelector('#startButton')
   lips = document.querySelector('#lips')
   glasses = document.querySelector('#glasses')
-  horns = document.querySelector('#horns')
+  deco = document.querySelector('#deco')
   flower = document.querySelector('#flower')
   hair = document.querySelector('#hair')
   gold = document.querySelector('#gold')
@@ -55,10 +59,13 @@ function startUp() {
   color = document.querySelector('#color')
   pink = document.querySelector('#pink')
   cone = document.querySelector('#cone')
+  glow = document.querySelector('#glow')
+  green = document.querySelector('#green')
+  heart = document.querySelector('#heart')
 
   db = document.querySelector('#downloadButton')
   returnButton = document.querySelector('#returnButton')
-  startMixingButton = document.querySelector('#backButton')
+  startMixingButton = document.querySelector('#startMixingButton')
 
   backButton = document.querySelector('#backButton')
   forwardButton = document.querySelector('#forwardButton')
@@ -71,7 +78,7 @@ function startUp() {
   returnButton.addEventListener('click', returnFunction, false)
   lips.addEventListener('click', placeImage, false)
   glasses.addEventListener('click', placeImage, false)
-  horns.addEventListener('click', placeImage, false)
+  deco.addEventListener('click', placeImage, false)
   flower.addEventListener('click', placeImage, false)
   hair.addEventListener('click', placeImage, false)
   gold.addEventListener('click', placeImage, false)
@@ -82,6 +89,9 @@ function startUp() {
   color.addEventListener('click', placeImage, false)
   pink.addEventListener('click', placeImage, false)
   cone.addEventListener('click', placeImage, false)
+  glow.addEventListener('click', placeImage, false)
+  green.addEventListener('click', placeImage, false)
+  heart.addEventListener('click', placeImage, false)
 
   backButton.addEventListener('click', pushBack, false)
   forwardButton.addEventListener('click', pushForward, false)
@@ -154,7 +164,7 @@ function takePicture() {
 
 function startMixingFunction() {
   window.addEventListener('keyup', deleteObjectKeyboard, false)
-  canvas.setBackgroundColor('#546738')
+  canvas.setBackgroundColor('#CDCDC1')
 
   cameraContentarea.className = 'displayNone'
   canvasMixArea.className = 'displayBlock'

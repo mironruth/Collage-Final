@@ -1,63 +1,114 @@
 <!doctype html>
 <html>
+
 <head>
 	<title>Webcam Image Collage</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta charset='utf-8'>
 	<link rel="stylesheet" href="main.css" type="text/css" media="screen">
-  <script src="fabric.js" charset="utf-8"></script>
+	<script src="fabric.js" charset="utf-8"></script>
 
 </head>
+
 <body>
-	<div class = "wrapper">
-<section id="cameraContentarea">
-	<h1>
-		Welcome to the WEBCAM
-	</h1>
-	<p>
-		Take the picture to be used for the image mashup.
-	</p>
-  <div class="camera">
-    <video id="video" playsinline>Video stream not available.</video>
-    <button id="startButton">Take photo</button>
-  </div>
-  <!-- this canvas will be hidden. It stores the image from the camera -->
-  <canvas id="canvasPhoto">
-  </canvas>
+	<div class="wrapper">
+		<section id="cameraContentarea">
 
-  <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
-  </div>
+			<div class=icon>
+				<img src="images/camera.png" id="camera" alt="" width="50px">
+			</div>
 
-  <p id='fred'>When you are happy with your picture, <button id="startMixingButton">Start Mixing</button>
-</section>
+			<h1>
+				Welcome to the WEBCAM
+			</h1>
 
-<section id="canvasMixArea">
-	<p> Instructions</p>
-  <canvas id="c" width="780" height="600"></canvas>
-  <img src="images/lips.png" id="lips" alt="" width="100px">
-  <img src="images/glasses.png" id="glasses" alt="" width="100px">
-  <img src="images/horns.png" id="horns" alt="" width="100px">
-	<img src="images/flower.png" id="flower" alt="" width="100px">
-	<img src="images/hair.png" id="hair" alt="" width="100px">
-	<img src="images/gold.png" id="gold" alt="" width="100px">
-	<img src="images/happy.png" id="happy" alt="" width="100px">
-	<img src="images/frame.png" id="frame" alt="" width="100px">
-	<img src="images/stroke.png" id="stroke" alt="" width="100px">
-	<img src="images/bday.png" id="bday" alt="" width="100px">
-	<img src="images/color.png" id="color" alt="" width="100px">
-	<img src="images/cone.png" id="cone" alt="" width="100px">
-	<img src="images/pink.png" id="pink" alt="" width="100px">
-  <p><a id="downloadButton" download="" href="">SAVE IMAGE</a><button id="returnButton">New Photo</button>
-		<button id = "backButton">Layer Back</button><button id = "forwardButton">Layer Forward</button>
-	</p>
+			<h3>
+				Take a SELFIE.
+			</h3>
+
+			<div class=items>
+				<div class="camera">
+					<video id="video" playsinline>Video stream not available.</video>
+					<button id="startButton">Take photo</button>
+				</div>
 
 
+				<!-- this canvas will be hidden. It stores the image from the camera -->
+				<canvas id="canvasPhoto">
+				</canvas>
 
-</section>
+				<div class="output">
+					<img id="photo" alt="The screen capture will appear in this box.">
+				</div>
+			</div>
+
+			<p id='fred'>ONLY WHEN you are HAPPY with your picture, <button id="startMixingButton">Start Mixing</button>
+		</section>
+
+		<section id="canvasMixArea">
+
+			<div class=icon>
+				<img src="images/canvas.png" id="canvas" alt="" width="50px">
+			</div>
+
+			<h1>
+				You Made It
+			</h1>
+
+			<h3> This is your CANVAS! Let's see what you can make! </h3>
+
+
+			<div class="grid-container">
+				<div>SCALE</div>
+				<div>ROTATE</div>
+				<div>LAYER</div>
+					<div>DELETE</div>
+  <div> Select the object you want to resize and then drag it from the red-dot corners if you want to maintain it's aspect ratio.</div>
+  <div> Select the object you want to rotate and then click on the red-dot which is outside the box and rotate.</div>
+  <div> To bring the artwork forward click on the "Layer Forward". To send the layer back, click on the "Layer Back"</div>
+	<div>To delete an object hit the delete button on your keyboard or click on the x button in the top right corner</div>
+
 </div>
-<script src="cameraCollage.js">
-</script>
+
+
+			<div class=canvas>
+				<canvas id="c" width="780" height="600"></canvas>
+			</div>
+
+			<div class=img>
+
+				<img src="images/frame.png" id="frame" alt="" width="100px">
+				<img src="images/green.png" id="green" alt="" width="100px">
+				<img src="images/heart.png" id="heart" alt="" width="100px">
+
+				<img src="images/lips.png" id="lips" alt="" width="100px">
+				<img src="images/glasses.png" id="glasses" alt="" width="100px">
+				<img src="images/deco.png" id="deco" alt="" width="100px">
+				<img src="images/flower.png" id="flower" alt="" width="100px">
+				<img src="images/hair.png" id="hair" alt="" width="100px">
+				<img src="images/gold.png" id="gold" alt="" width="100px">
+				<img src="images/happy.png" id="happy" alt="" width="100px">
+				<img src="images/stroke.png" id="stroke" alt="" width="100px">
+				<img src="images/bday.png" id="bday" alt="" width="100px">
+				<img src="images/color.png" id="color" alt="" width="100px">
+				<img src="images/cone.png" id="cone" alt="" width="100px">
+				<img src="images/pink.png" id="pink" alt="" width="100px">
+				<img src="images/glow.png" id="glow" alt="" width="100px">
+			</div>
+
+
+			<p><a id="downloadButton" download="" href="">SAVE IMAGE</a><button id="returnButton">New Photo</button>
+				<button id="backButton">
+					<- Layer Back</button><button id="forwardButton">Layer Forward -> </button>
+			</p>
+
+
+
+		</section>
+	</div>
+	<script src="cameraCollage.js">
+	</script>
 
 </body>
+
 </html>
